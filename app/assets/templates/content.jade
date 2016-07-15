@@ -6,7 +6,7 @@ header#masthead(role='banner')
     ## A designer who develops, and a developer who designs
     ### I don't know if there's a word for that yet. ¯\\_(ツ)_/¯
 
-main#content
+main#content.cols
   section.intro
     :markdown-it(typographer)
       Since 2006, I've launched Web experiences for a diverse clientele that includes other design and development shops, marketing organizations, nonprofits, and _Fortune_ 500 companies.
@@ -15,7 +15,7 @@ main#content
 
       Interests and hobbies: cooking, music, writing, and (surprisingly, recently) health and fitness.
 
-  section.experience
+  section.experience.col
     h1 Experience
 
     ul.events
@@ -80,11 +80,11 @@ main#content
             - Assisted in the production of microsites, mobile sites (this was before responsive really took off), and marketing assets
           </div>
 
-  section.expertise
+  section.expertise.col.cols
     :markdown-it(typographer html)
       # Expertise
 
-      <div class="expertise-design">
+      <div class="col expertise-design">
 
         ## Design
 
@@ -94,7 +94,7 @@ main#content
         - UI
       </div>
 
-      <div class="expertise-development">
+      <div class="col expertise-development">
 
         ## Development
 
