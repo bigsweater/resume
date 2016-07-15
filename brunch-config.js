@@ -10,6 +10,24 @@ module.exports = {
   },
 
   plugins: {
-    babel: {presets: ['es2015']}
+    babel: {presets: ['es2015']},
+    postcss: {
+      processors: [
+        require('autoprefixer')({
+          browsers: 'last 3 versions',
+
+        })
+      ]
+    },
+
+    uncss: {
+      options: {
+        csspath: './',
+        htmlroot: 'public'
+      },
+      files: {
+        ['index.html']
+      }
+    }
   }
 };
