@@ -14,20 +14,9 @@ module.exports = {
     postcss: {
       processors: [
         require('autoprefixer')({
-          browsers: 'last 3 versions',
-
+          browsers: 'last 3 versions'
         })
       ]
-    },
-
-    uncss: {
-      options: {
-        csspath: './',
-        htmlroot: 'public'
-      },
-      files: {
-        ['index.html']
-      }
     }
   }
 };
