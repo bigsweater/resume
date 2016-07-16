@@ -1,0 +1,214 @@
+// Fonts
+@import "./fonts";
+
+// Basics
+:root {
+  color:        $brown;
+  letter-spacing: 0.013em;
+  line-height:  #{$ms-ratio}em;
+  word-wrap:    break-word;
+
+  @include ms-respond(font-size, 1);
+}
+
+::selection {
+  background: $orange;
+  color:      $white;
+  text-shadow:none;
+}
+
+
+em {
+  font-family:  $futura;
+  font-style:   italic;
+  font-weight:  300;
+
+  strong {
+    font-style:   italic;
+    font-weight:  700;
+  }
+}
+
+strong {
+  font-family:  $futura;
+  font-style:   normal;
+  font-weight:  700;
+
+  em {
+    font-style:   italic;
+    font-weight:  700;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family:    $rockwell;
+  font-style:     normal;
+  font-weight:    300;
+  letter-spacing: 0.023em;
+  line-height:    1em;
+}
+
+// Rhythm and Scale
+h1, h2, h3, h4 {
+  color:  $orange;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-bottom:  0;
+}
+
+h1 {
+  font-size:      ms(2);
+  text-transform: uppercase;
+  text-align:     center;
+
+  @media (min-width:60em) {
+    font-size:  ms(3);
+  }
+}
+
+h2 {
+  font-size:  ms(1);
+  margin:     ms(1) 0 0;
+
+  @media (min-width:60em) {
+    font-size:  ms(3);
+  }
+}
+
+h3 {
+  font-size:  ms(1);
+  margin:     ms(1) 0 0;
+
+  @media (min-width:60em) {
+    font-size:  ms(2);
+  }
+}
+
+h4, h5, h6 {
+  margin-top: #{$ms-ratio}em;
+}
+
+h4 {
+  font-size:  ms(1);
+}
+
+h5, h6 {
+  font-family:  $futura;
+}
+
+h5 {
+  font-size:    ms(0);
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size:  ms(0);
+  font-style:   italic;
+}
+
+p,
+li, dt,
+hr {
+  margin: #{$ms-ratio}em 0 0;
+}
+
+
+// Lanks
+a {
+  color:  $brown;
+
+  @include underline($white, $brown, true, 1, 2);
+
+  &:hover {
+    color:  $orange;
+
+    @include underline($white, $orange, true, 1, 2);
+  }
+
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 & {
+    background: transparent;
+    color:  $orange;
+    text-shadow: none;
+
+    &:hover {
+      background: transparent;
+      color:  $brown;
+      text-shadow: none;
+    }
+  }
+
+  img {
+    background: transparent;
+    text-decoration: none;
+  }
+}
+
+// HRs
+hr {
+  border: none;
+  background: transparent url(../images/hr_argyle-orange.svg) no-repeat center center;
+  background-size: ms(0) 100%;
+  height: ms(0);
+
+  .m-content-intro + & {
+    margin-top: -(ms(2));
+  }
+}
+
+// Lists
+ol, ul {
+  padding-left: #{$ms-ratio}em;
+}
+
+dt + dd {
+  margin-top: 0;
+}
+
+dt {
+  font-style: italic;
+}
+
+// Code/monospace blocks
+code, kbd, pre, samp {
+  font-family:  $monospace;
+}
+
+code {
+  background: lighten($brown, 60%);
+}
+
+pre {
+  background: lighten($brown, 60%);
+  padding:    #{$ms-ratio}em;
+  white-space: pre-wrap;
+
+  code {
+    background: transparent;
+  }
+}
+
+// Quote blocks
+blockquote {
+  border-left:  solid lighten($brown, 60%) #{$ms-ratio / 2}em;
+  font-style:   italic;
+  margin:       #{$ms-ratio}em 0 0;
+  padding-left: #{$ms-ratio / 2}em;
+
+  strong {
+    font-weight:  700;
+  }
+
+  em {
+    font-style: normal;
+  }
+
+  strong em,
+  em strong {
+    font-style:   normal;
+    font-weight:  700;
+  }
+}

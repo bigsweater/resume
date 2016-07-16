@@ -1,0 +1,38 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Colors
+$orange:  #f58220;
+$brown:   #734339;
+$white:   #fff;
+
+// Type
+$rockwell:  "Rockwell", "Courier New", Courier, Georgia, Times, "Times New Roman", serif;
+$futura:    "Futura", "Avant Garde", "Trebuchet MS", Helvetica, Arial, sans-serif;
+$futura-c:  "Futura Condensed", "Helvetica Neue Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+$monospace: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+
+// Type - Modular Scale
+$ms-base: 1em;
+$ms-ratio: $golden;
+$ms-range:
+  1         20em,
+  $ms-ratio 80em,
+  ($ms-ratio * 1.641) 131.25em;
+
+// etc.
+$global-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.1);
+
+@mixin limit-width($breakpoint, $width) {
+  @media (min-width: $breakpoint) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $width;
+  }
+}
+
+$global-breakpoint: 50em;
+$global-width: 70%;
+
+$global-bez: cubic-bezier(1,0,0,1);
+$global-ease: ease-in-out;

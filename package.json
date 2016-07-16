@@ -13,6 +13,9 @@
     "prod": "brunch build --production"
   },
   "dependencies": {
+    "modularscale-sass": "^2.1.1",
+    "normalize-scss": "^5.0.3",
+    "sass-toolkit": "^2.10.0",
     "vue": "^1.0.26"
   },
   "devDependencies": {

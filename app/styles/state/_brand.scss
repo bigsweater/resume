@@ -1,0 +1,39 @@
+// ground control to major tom
+.m-brand:hover,
+.m-brand:active,
+.m-brand-liftoff {
+  .m-brand-rocket {
+    animation:  floating 0.75s infinite ease-in-out alternate-reverse;
+    animation-fill-mode: both;
+
+    &.majortom-transition {
+      top:        0;
+      transition: top 4s cubic-bezier(0,1,0,1);
+      transform:  scale(1);
+
+      &.majortom-prelaunch {
+        animation:  none;
+      }
+    }
+
+    &.majortom-leave {
+      top: -105%;
+      transform: scale(0.75, 2);
+      transition: top 1s cubic-bezier(1,0,1,0) 0s,
+                  transform 0.5s ease-in-out 0.75s;
+    }
+
+    &.majortom-enter {
+      top: -105%;
+    }
+  }
+
+  .m-brand-thrusters {
+    animation:  thrusters 0.1s infinite;
+  }
+
+  .m-brand-diamond {
+    animation:  floating 0.75s infinite ease-in-out alternate-reverse;
+    animation-fill-mode: both;
+  }
+}

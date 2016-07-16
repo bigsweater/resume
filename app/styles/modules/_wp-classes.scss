@@ -1,0 +1,86 @@
+// WordPress Generated Classes
+// http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+
+$thumb-margin: (ms(1));
+
+// Media alignment
+.alignnone {
+  max-width: 100%;
+}
+.aligncenter {
+  display: block;
+  margin: $thumb-margin auto;
+  text-align: center;
+}
+.alignleft,
+.alignright {
+  margin: $thumb-margin auto;
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .alignleft,
+  .alignright {
+    width: auto;
+  }
+
+  // Only float if not on an extra small device
+  .alignleft {
+    float: left;
+    margin: $thumb-margin $thumb-margin ($thumb-margin / 2) (-#{ms(0)});
+    transform: rotate(-2deg);
+  }
+  .alignright {
+    float: right;
+    margin: $thumb-margin  (-#{ms(0)}) ($thumb-margin / 2) $thumb-margin;
+    transform: rotate(2deg);
+  }
+}
+
+@media (min-width: $global-breakpoint) {
+  .alignleft {
+    margin-left: -#{ms(2)};
+  }
+
+  .alignright {
+    margin-right: -#{ms(2)};
+  }
+}
+
+// Captions
+.wp-caption-text {
+  font-size: ms(-1);
+  font-style: italic;
+  line-height: ms(0) * 1.5;
+  margin: 0;
+  padding: ms(-1);
+
+  em {
+    font-style: normal;
+  }
+}
+
+// Text meant only for screen readers
+.screen-reader-text {
+  @extend .sr-only;
+  @extend .sr-only-focusable;
+}
+
+// Embeds
+// (Defaulting to 16:9 since why not)
+// (disabled for now since it messes with tweets)
+// .entry-content-asset {
+//   height: 0;
+//   position: relative;
+//   padding-bottom: 56.25%;
+
+//   object,
+//   embed,
+//   iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }

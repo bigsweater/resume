@@ -1,0 +1,12 @@
+.l-footer {
+  margin-top: ms(2);
+  padding:    ms(0) 0;
+  position:   relative;
+  width:      100%;
+
+  @include limit-width($global-breakpoint, $global-width);
+
+  .u-type-sm {
+    font-size: (ms(-2) * 1.25);
+  }
+}

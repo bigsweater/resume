@@ -1,0 +1,14 @@
+// Hero sections
+.l-section-hero {
+  background: $orange;
+  color:      white;
+  font-size:  ms(0);
+  line-height:  #{$ms-ratio}em;
+  margin:     0 auto 3.236em;
+  text-align: center;
+}
+
+.l-section-hero *::selection {
+  background: $white;
+  color:      $orange;
+}

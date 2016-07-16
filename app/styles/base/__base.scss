@@ -1,0 +1,11 @@
+// Normalize all the things
+@include normalize();
+
+// Base styles
+@import "./variables",
+        "./global",
+        "./typography",
+        "./animations",
+        "./tables",
+        "./embeds",
+        "./forms";

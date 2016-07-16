@@ -1,0 +1,10 @@
+.l-post {
+  font-size:  1em;
+  line-height:  #{$ms-ratio}em;
+  padding-top: ms(4);
+  position: relative;
+
+  @include limit-width($global-breakpoint, $global-width);
+}
+
+

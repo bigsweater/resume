@@ -6,7 +6,9 @@ module.exports = {
         'app.js': /^app/
       }
     },
-    stylesheets: {joinTo: 'app.css'}
+    stylesheets: {
+      joinTo: 'app.css'
+    }
   },
 
   plugins: {
@@ -17,6 +19,15 @@ module.exports = {
           browsers: 'last 3 versions'
         })
       ]
+    },
+    sass: {
+      options: {
+        includePaths: [
+          'node_modules/modularscale-sass/stylesheets',
+          'node_modules/normalize-scss/sass',
+          'node_modules/sass-toolkit/stylesheets'
+        ]
+      }
     }
   }
 };

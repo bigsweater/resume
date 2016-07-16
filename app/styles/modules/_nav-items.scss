@@ -1,0 +1,133 @@
+.m-nav-items {
+  align-items:    center;
+  display:        flex;
+  font-family:    $futura-c;
+  font-style:     italic;
+  font-weight:    700;
+  flex-flow:      row wrap;
+  flex-grow:       5;
+  flex-shrink:     3;
+  justify-content: space-around;
+  margin:          0 auto;
+  z-index:         1;
+
+  @media(min-width: $global-breakpoint) {
+    padding:         0 15%;
+  }
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    align-items:    center;
+    display:        flex;
+    font-family:    $futura-c;
+    font-style:     italic;
+    font-weight:    700;
+    flex-flow:      row wrap;
+    flex-grow:       5;
+    flex-shrink:     3;
+    justify-content: space-around;
+    margin:          0 auto;
+    z-index:         1;
+  }
+
+  a {
+    background:     transparent;
+    color:          $white;
+    display:        block;
+    margin:         0;
+    position:       relative;
+    text-shadow:    none;
+    text-transform: uppercase;
+    z-index:        1;
+
+    &:hover,
+    &:active,
+    &.v-link-active {
+      @include underline ($white, $white, false, 1.25, 1.25)
+    }
+  }
+
+  .active a {
+    @include underline ($white, $white, false, 1.25, 1.25)
+  }
+}
+
+// Post pagination
+.m-posts-nav {
+  align-items:      baseline;
+  display:          flex;
+  font-family:      $futura-c;
+  font-style:       italic;
+  font-weight:      700;
+  justify-content:  space-between;
+  margin-top:       ms(2);
+  width:            100%;
+  z-index:          0;
+}
+
+.m-posts-nav-link {
+  background: transparent;
+  color:  $orange;
+  margin: auto;
+  text-shadow:  none;
+
+  &:hover {
+    background: transparent;
+    text-shadow:  none;
+  }
+}
+
+.m-posts-nav-link-next {
+  align-self: flex-end;
+  margin-right: 0;
+  text-align: right;
+}
+
+.m-posts-nav-link-previous {
+  align-self: flex-start;
+  margin-left: 0;
+}
+
+// Social media links
+.m-sm-nav {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  line-height: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.m-sm-nav-item {
+  background: $orange;
+  border-radius: 2px;
+  display:  block;
+  height: ms(1);
+  padding:   0.3em;
+  margin:    0 ms(-2);
+  width: ms(1);
+  transform: perspective(1em) translatez(0em);
+  transition: transform $global-bez 0.5s;
+
+  &:hover {
+    background: $orange;
+    transform: perspective(1em) translateZ(0.25em) rotate(3deg);
+    transition-duration: 0.2s;
+  }
+
+  &:active {
+    background: $orange;
+    transform: perspective(1em) translateZ(0.325em) rotate(4deg);
+    transition-duration: 0.075s;
+    transition-timing-function: linear;
+  }
+
+  svg {
+    fill: $white;
+  }
+}

@@ -1,0 +1,39 @@
+.l-masthead-wrap {
+  height:  0;
+  float:   left;
+  margin:  0;
+  padding: 0;
+}
+
+.l-masthead {
+  align-items:     center;
+  background:      $orange;
+  box-shadow:      $global-shadow;
+  color:           $white;
+  display:         flex;
+  flex-flow:       row wrap;
+  justify-content: space-around;
+  left:            0;
+  margin-top:      0;
+  position:        absolute;
+  text-align:      center;
+  top:             0;
+  width:           100%;
+  z-index:         10;
+
+  .m-content-hero & {
+    background: transparent;
+    box-shadow: none;
+    margin-top: $ms-base;
+  }
+}
+
+.l-masthead-home {
+  background: transparent;
+  position: relative;
+  z-index:  8;
+
+  @include ms-respond(padding-top, 0);
+  @include ms-respond(padding-bottom, 0);
+}
+
