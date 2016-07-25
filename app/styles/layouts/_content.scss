@@ -1,0 +1,61 @@
+// Columns
+.cols {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.col {
+  flex-basis: 100%;
+
+  @media (min-width:30em) {
+    flex-basis: 45%;
+    margin-top: 0;
+  }
+}
+
+// Main content sections
+.intro {
+  @media (min-width: 40em) {
+    margin-left: 12%;
+    padding-left: ms(0);
+  }
+  @media (min-width: 50em) {
+    margin-left: 8%;
+  }
+
+  h2 {
+    line-height:    #{$ms-ratio}em;
+    font-family: $futura;
+    font-size: ms(0);
+  }
+}
+
+.experience,
+.expertise {
+  margin-top: ms(2);
+
+  h2 {
+    font-family: $futura-c;
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+}
+
+
+.expertise {
+  h3 {
+    border-bottom: 1px solid $orange;
+    font-size: ms(0);
+    margin: 0;
+    padding-bottom: ms(-1);
+  }
+
+  ul, li {
+    margin: ms(-1) 0;
+  }
+
+  li {
+    margin: 0;
+  }
+}

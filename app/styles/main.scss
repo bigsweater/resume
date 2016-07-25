@@ -1,7 +1,11 @@
 // Third-party dependencies
-@import 'normalize',
-        'modular-scale',
-        'toolkit';
+@import "normalize";
+@import "modular-scale";
 
-// Import main styles
-@import 'base/_base';
+// Main styles
+@import "base/base";
+@import "layouts/layouts";
+@import "modules/modules";
+
+// Print
+@import "print";

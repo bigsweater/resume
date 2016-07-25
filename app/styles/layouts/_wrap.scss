@@ -1,40 +1,45 @@
-// Application wrapper
-#bsd-wrap {
-  align-items: flex-start;
-  display:    flex;
-  flex-flow:  column nowrap;
-  margin-top: 0;
+body {
+  background: $orange;
+}
+
+// Big ole outermost wrap
+#app {
+  margin: 0;
   min-height: 100vh;
   position:   relative;
   width:      100%;
+  z-index: 1;
 }
 
-.app-wrap {
-  flex-grow: 1;
-  flex-shrink: 1;
-  margin-top: 0;
-  width:      100%;
-}
+// Inner wrap
+.content-wrap {
+  align-items: flex-start;
+  background:  $white;
+  box-shadow:  $global-shadow;
+  display:     flex;
+  flex-flow:   column nowrap;
+  margin:      ms(0);
+  max-width:   100%;
+  padding:     ms(1);
+  position:    relative;
 
-// Section wrappers
-.l-section {
-  margin-top: 0;
-}
+  @media (min-width: 30em) {
+    margin: ms(1);
+    padding: ms(2);
+  }
 
-// Loading module
-.l-loading-wrap {
-  height:   0;
-  margin:   0;
-  overflow: visible;
-  width:    0;
-}
+  @media (min-width: 60em) {
+    margin: ms(2);
+    padding: ms(3);
+  }
 
-.l-loading {
-  background: $white;
-  bottom:     0;
-  height:     100vh;
-  left:       0;
-  position:   fixed;
-  width:      100vw;
-  z-index:    9;
+  @media (min-width: 80em) {
+    margin: ms(3);
+    padding: ms(3) * 0.75 ms(3);
+  }
+
+  @media (min-width: 131.25em) {
+    margin: ms(4);
+    padding: ms(3) ms(4);
+  }
 }

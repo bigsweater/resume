@@ -1,0 +1,281 @@
+@page {
+  size: letter portrait;
+  margin: 0.75in;
+}
+
+.printonly {
+  display: none;
+  visibility: hidden;
+}
+
+.pagebreak {
+  display: none;
+}
+
+@media only print {
+  $orange: darken($orange, 10%);
+
+  * {
+    float: none !important;
+    overflow: visible !important;
+  }
+
+  .pagebreak {
+    display: block;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    page-break-before: always;
+
+    & + * {
+      margin-top: 0 !important;
+    }
+  }
+
+  html {
+    font-size: 10pt;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  * + * {
+    margin-top: 1em;
+  }
+
+  a {
+    background: none;
+    text-decoration: none;
+    text-shadow: none;
+    transition: none;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .noprint {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  .printonly {
+    display: inherit !important;
+    visibility: visible;
+  }
+
+  #app {
+    background: transparent;
+    float: none;
+    overflow: visible;
+    padding: 0;
+  }
+
+  #vue {
+    display: none;
+  }
+
+  .content-wrap {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #masthead {
+    font-size: ms(1);
+    justify-content: flex-start;
+
+    .content {
+      border-left-width: 0.5pt;
+    }
+
+    .brand {
+      align-self: center;
+      flex-basis: 7%;
+      min-width: 7%;
+    }
+  }
+
+  .intro {
+    margin-left: 0;
+    padding-left: calc(7% + #{ms(1)});
+  }
+
+  // Work History (de-timeline the timeline)
+  .btn,
+  .btn-wrap {
+    display: none;
+    visibility: hidden;
+  }
+
+  .events-wrap {
+    background: transparent;
+    border: none;
+    height: auto;
+    margin: 0;
+    width: auto;
+    overflow: visible;
+    overflow-y: visible;
+  }
+
+  .events {
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .event {
+    &::before,
+    &::after {
+      display: none;
+      visibility: hidden;
+    }
+
+    &[data-from],
+    &[data-to] {
+      float: none;
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: auto;
+      width: 100%;
+     position: static;
+    }
+  }
+
+  .event-meta {
+    display: none;
+    visibility: hidden;
+  }
+
+  .event-desc {
+    display: block;
+    position: static;
+    overflow: visible;
+    margin: 0; padding: 0;
+    max-width: 100%;
+    max-height: initial;
+    opacity: 1;
+
+    li, p {
+      page-break-inside: avoid;
+    }
+  }
+
+  .event-desc-meta {
+    page-break-inside: avoid;
+
+    h3 {
+      margin: 0;
+    }
+
+    h3, h4, h5 {
+      font-size: 1em;
+      line-height: 1em;
+      text-align: left;
+    }
+
+    h4 {
+      margin: 0.5em 0 0;
+    }
+
+    h5 {
+      font-size: 7pt;
+      text-transform: uppercase;
+    }
+  }
+
+  // Experience and Expertise layout
+  #content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .intro {
+    width: 100%;
+  }
+
+  .expertise h2,
+  .experience h2 {
+    font-size: 1.25em;
+    margin: 0;
+  }
+
+  .expertise {
+    flex: 1 1 auto;
+    order: 1;
+    max-width: 30%;
+
+    h3 {
+      border-bottom-width: 0.5pt;
+    }
+
+    .cols {
+      display: block;
+    }
+
+    .col {
+      width: 100%;
+
+      &:last-child {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .experience {
+    flex: 2 2 auto;
+    order: 2;
+    max-width: 60%;
+  }
+
+  footer {
+    margin-top: ms(2);
+    padding-left: calc(7% + #{ms(1)});
+    text-align: left;
+
+    h2 {
+      text-align: left;
+    }
+
+    .cols {
+      display: block;
+      float: left;
+      width: 100%;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 100%;
+      }
+    }
+
+    .col {
+      display: block;
+      float: left !important;
+
+      &:first-child {
+        border-right: 0.5pt solid lighten($brown, 50%);
+        padding-right: 3em;
+        margin-right: 3em;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .about-site {
+      clear: both;
+      font-size: 0.8em;
+      margin: ms(1) 0 0;
+      text-align: left;
+    }
+  }
+}

@@ -5,6 +5,11 @@ $icon-font-path:        "../fonts/";
 $orange:  #f58220;
 $brown:   #734339;
 $white:   #fff;
+$compcolor1: adjust-hue(desaturate(lighten($orange, 15%), 15%), 10deg);
+$compcolor2: darken(desaturate(adjust-hue($compcolor1, 160deg), 50%), 20%);
+$compcolor3: desaturate(lighten($brown, 10%), 20%);
+$compcolor4: adjust-hue(saturate($compcolor3, 30%), 50deg);
+$compcolor5: desaturate(adjust-hue($orange, 160deg), 10%);
 
 // Type
 $rockwell:  "Rockwell", "Courier New", Courier, Georgia, Times, "Times New Roman", serif;
@@ -21,8 +26,15 @@ $ms-range:
   ($ms-ratio * 1.641) 131.25em;
 
 // etc.
-$global-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.1);
+$global-shadow: 0 0 1em rgba(0, 0, 0, 0.15);
 
+$global-breakpoint: 50em;
+$global-width: 70%;
+
+$global-bez: cubic-bezier(1,0,0,1);
+$global-ease: ease-in-out;
+
+// Mixins
 @mixin limit-width($breakpoint, $width) {
   @media (min-width: $breakpoint) {
     margin-left: auto;
@@ -30,9 +42,3 @@ $global-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.1);
     max-width: $width;
   }
 }
-
-$global-breakpoint: 50em;
-$global-width: 70%;
-
-$global-bez: cubic-bezier(1,0,0,1);
-$global-ease: ease-in-out;

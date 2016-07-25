@@ -13,9 +13,13 @@
     "prod": "brunch build --production"
   },
   "dependencies": {
+    "fastdom": "^1.0.3",
+    "mainloop.js": "^1.0.3",
     "modularscale-sass": "^2.1.1",
     "normalize-scss": "^5.0.3",
+    "onecolor": "^3.0.4",
     "sass-toolkit": "^2.10.0",
+    "stats.js": "^0.16.0",
     "vue": "^1.0.26"
   },
   "devDependencies": {
@@ -35,6 +39,7 @@
     "postcss-brunch": "^0.5.0",
     "sass-brunch": "^2.6.3",
     "uglify-js-brunch": "^2.0.0",
-    "vue-brunch": "^1.1.2"
+    "vue-brunch": "^1.1.2",
+    "vueify": "^8.7.0"
   }
 }

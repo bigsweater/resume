@@ -11,15 +11,15 @@ module.exports = {
     }
   },
 
+  modules: {
+    autoRequire: {
+      'app.js': ['initialize']
+    }
+  },
+
   plugins: {
     babel: {presets: ['es2015']},
-    postcss: {
-      processors: [
-        require('autoprefixer')({
-          browsers: 'last 3 versions'
-        })
-      ]
-    },
+
     sass: {
       options: {
         includePaths: [
@@ -28,6 +28,14 @@ module.exports = {
           'node_modules/sass-toolkit/stylesheets'
         ]
       }
+    },
+
+    postcss: {
+      processors: [
+        require('autoprefixer')({
+          browsers: 'last 3 versions'
+        })
+      ]
     }
   }
 };
