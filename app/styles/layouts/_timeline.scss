@@ -341,42 +341,46 @@
 }
 
 .event[data-from="2007"] {
-  right: 10%
+  right: 9.1%
 }
 
 .event[data-from="2008"] {
-  right: 20%
+  right: 18.2%
 }
 
 .event[data-from="2009"] {
-  right: 30%
+  right: 27.3%
 }
 
 .event[data-from="2010"] {
-  right: 40%
+  right: 36.4%
 }
 
 .event[data-from="2011"] {
-  right: 50%
+  right: 45.5%
 }
 
 .event[data-from="2012"] {
-  right: 60%
+  right: 54.6%
 }
 
 .event[data-from="2013"] {
-  right: 70%
+  right: 63.7%
 }
 
 .event[data-from="2014"] {
-  right: 80%
+  right: 72.8%
 }
 
 .event[data-from="2015"] {
-  right: 90%
+  right: 81.9%
 }
 
 .event[data-from="2016"] {
+  right: 91%;
+}
+
+.event[data-from="2017"] {
   right: calc(100% - 10px)
 }
 
@@ -385,41 +389,45 @@
 }
 
 .event[data-to="2007"] {
-  left: 90%
+  left: 91%;
 }
 
 .event[data-to="2008"] {
-  left: 80%
+  left: 81.9%;
 }
 
 .event[data-to="2009"] {
-  left: 70%
+  left: 72.8%;
 }
 
 .event[data-to="2010"] {
-  left: 60%
+  left: 63.7%;
 }
 
 .event[data-to="2011"] {
-  left: 50%
+  left: 54.6%;
 }
 
 .event[data-to="2012"] {
-  left: 40%
+  left: 45.5%;
 }
 
 .event[data-to="2013"] {
-  left: 30%
+  left: 36.4%;
 }
 
 .event[data-to="2014"] {
-  left: 20%
+  left: 27.3%;
 }
 
 .event[data-to="2015"] {
-  left: 10%
+  left: 18.2%;
 }
 
 .event[data-to="2016"] {
-  left: 10px
+  left: 9.1%;
+}
+
+.event[data-to="2017"] {
+  left: 10px;
 }

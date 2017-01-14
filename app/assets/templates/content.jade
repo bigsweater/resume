@@ -26,12 +26,42 @@ main#content
 
     .events-wrap
       ul.events
+        li#event-morrison.event(data-from="2016", data-to="2017")
+          .noprint.event-meta
+            :markdown-it(typographer)
+              ### Morrison Agency
+              #### Senior Front-End Developer
+              ##### October 2016 -- Present
+
+            a.btn.btn-readmore(href='#morrison-description') Read More
+
+          #morrison-description.event-desc(role="dialog")
+            a.btn.btn-close(href='#close' aria-label="close") &times;
+
+            .event-desc-meta(aria-hidden="true")
+              :markdown-it(typographer)
+                ### Morrison Agency
+                #### Senior Front-End Developer
+                ##### October 2016 -- Present
+
+            :markdown-it(typographer html)
+              <hr class="noprint">
+
+              I've worked with the talented folks at Morrison to launch web stuff for international clients like Mitsubishi Electric and Samsung. Accomplishments include:
+
+              - Implemented deploy tools and improved internal workflows
+              - Contributed to documentation to aid other developers
+              - Built complex marketing materials under very tight deadlines
+              - Built custom marketing automation API integrations
+
+            p.btn-wrap: a.btn.btn-standard(href='#close' aria-label="close") Close
+
         li#event-bigsweater.event(data-from="2006", data-to="2016")
           .noprint.event-meta
             :markdown-it(typographer)
               ### Big Sweater
               #### Independent
-              ##### 2006 -- Present
+              ##### 2006 -- 2016
 
             a.btn.btn-readmore(href='#bigsweater-description') Read More
 
@@ -42,7 +72,7 @@ main#content
               :markdown-it(typographer)
                 ### Big Sweater
                 #### Independent
-                ##### 2006 -- Present
+                ##### 2006 -- 2016
 
             :markdown-it(typographer html)
               <hr class="noprint">
@@ -150,6 +180,7 @@ main#content
         li.legend.noprint(aria-hidden="true")
           ol
             li: Now
+            li: time 2016
             li: time 2015
             li: time 2014
             li: time 2013
@@ -212,7 +243,7 @@ footer
 
       Fonts in use: Futura and Rockwell.
 
-      &copy; 2016 Vincent Maglione
+      &copy; 2017 Vincent Maglione
 
   .printonly.about-site(aria-hidden="true")
     :markdown-it(typographer)
